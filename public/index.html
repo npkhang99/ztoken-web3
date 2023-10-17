@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+    <link
+        rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>😺</text></svg>"
+    />
+    <head>
+        <script src="https://c0f4f41c-2f55-4863-921b-sdk-docs.github.io/cdn/metamask-sdk.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/web3@4.1.2/dist/web3.min.js"></script>
+        <title>Miu, Tiu, Mèn, Lém</title>
+    </head>
+    <body>
+        <h1>Get ZToken balance</h1>
+        <button style="margin-bottom: 1em" id="detectMetaMaskBtn">Detect MetaMask</button>
+        <div>
+            Retrieved infos:
+            <div style="margin-left: 2em" id="metaMaskData"></div>
+        </div>
+        <div style="margin-bottom: 1em">
+            Your balance:
+            <div style="display: inline" id="balanceField">0</div>
+            ZToken
+        </div>
+
+        <button style="margin-bottom: 1em" id="claimZTokenFromFaucetBtn">Claim ZToken from faucet</button>
+    </body>
+    <script src="../events.js"></script>
+</html>
