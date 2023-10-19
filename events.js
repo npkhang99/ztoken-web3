@@ -177,7 +177,23 @@ function getOutcome(outcome) {
 
 document.getElementById('playBtn').addEventListener('click', async () => {
     if (!initialized) {
-        alert('You haven\'t initialized MetaMask yet.\nPlease click the "Detect MetaMask" button first')
+        alert('You haven\'t initialized MetaMask yet.\nPlease click the "Detect MetaMask" button first.')
+        return
+    }
+
+    const betAmount = parseInt(document.getElementById('betAmountInput').value)
+    if (Number.isNaN(betAmount)) {
+        alert('Invalid input. Please try again.')
+        return
+    }
+
+    if (betAmount <= 0) {
+        alert('Can\'t bet a non-positive number of token. Please try again.')
+        return
+    }
+
+    if (betAmount > 100) {
+        alert('The maximum bet amount is 100 tokens. Please try again.')
         return
     }
 
