@@ -91,8 +91,8 @@ function toggleButtonProcessing(btn, spinner, toggleOn = TOGGLE_ON) {
 }
 
 detectMetaMaskBtn.addEventListener('click', async () => {
+    const spinner = document.getElementById('detectMetaMaskSpinner')
     try {
-        const spinner = document.getElementById('detectMetaMaskSpinner')
         toggleButtonProcessing(detectMetaMaskBtn, spinner, TOGGLE_ON)
 
         const chainId = parseInt(await ethereum.request({method: 'eth_chainId'}), 16)
@@ -129,8 +129,8 @@ detectMetaMaskBtn.addEventListener('click', async () => {
 })
 
 claimTokenZBtn.addEventListener('click', async () => {
+    const spinner = document.getElementById('claimingTokenSpinner')
     try {
-        const spinner = document.getElementById('claimingTokenSpinner')
         toggleButtonProcessing(claimTokenZBtn, spinner, TOGGLE_ON)
 
         if (!initialized) {
@@ -184,8 +184,8 @@ claimTokenZBtn.addEventListener('click', async () => {
 })
 
 approveGameBtn.addEventListener('click', async () => {
+    const spinner = document.getElementById('approvingGameSpinner')
     try {
-        const spinner = document.getElementById('approvingGameSpinner')
         toggleButtonProcessing(approveGameBtn, spinner, TOGGLE_ON)
 
         if (!initialized) {
@@ -248,8 +248,8 @@ function getOutcome(outcome) {
 }
 
 playBtn.addEventListener('click', async () => {
+    const spinner = document.getElementById('playSpinner')
     try {
-        const spinner = document.getElementById('playSpinner')
         toggleButtonProcessing(playBtn, spinner, TOGGLE_ON)
 
         if (!initialized) {
